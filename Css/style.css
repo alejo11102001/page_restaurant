@@ -1,0 +1,170 @@
+/* Variables CSS para colores y fuentes */
+:root {
+    --color-primary: #FF8C00;
+    --color-bg: antiquewhite;
+    --color-text: #333;
+    --font-family-base: Arial, sans-serif;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font-family-base);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.Cards__Header {
+    background-color: var(--color-primary);
+    padding: 1rem 0;
+}
+
+.Header__Title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Main */
+.Cards__Menu {
+    padding: 2rem 1rem;
+    flex-grow: 1;
+}
+
+.Menu__Title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.Menu__Section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.History__Description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.History__image {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 355px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer fijo abajo izquierda */
+.Cards__Footer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    background: transparent;
+}
+
+/* Menú principal - solo 1 botón visible */
+.List__Menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ítem que contiene el menú desplegable */
+.Menu__Submenu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botón menú */
+.Submenu__Select {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+}
+
+/* Opciones desplegadas (submenu) */
+.Submenu__List {
+    display: none;
+    position: absolute;
+    bottom: 45px; /* aparece justo arriba del botón */
+    left: 0;
+    background-color: var(--color-bg);
+    min-width: 140px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 200;
+}
+
+/* Cada opción dentro del submenu */
+.Submenu__List li a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: normal;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover en las opciones */
+.Submenu__List li a:hover,
+.Submenu__List li a:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Mostrar submenu al hacer hover o focus en el botón */
+.Menu__Submenu:hover .Submenu__List,
+.Menu__Submenu:focus-within .Submenu__List {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive - En pantallas pequeñas ajustar el tamaño del menú */
+@media (max-width: 480px) {
+    .Cards__Footer {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .Submenu__Select {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .Submenu__List {
+        min-width: 120px;
+        bottom: 40px;
+    }
+
+    .Submenu__List li a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

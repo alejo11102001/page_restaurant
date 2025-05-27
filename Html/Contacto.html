@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Contacto - El Veguetazo</title>
+        <link rel="stylesheet" href="../Css/style4.css">
+    </head>
+    <body>
+        <header class="Cards__Header" role="banner">
+            <h1 class="Header__Title">Contacto - El Veguetazo</h1>
+        </header>
+
+        <main class="Cards__Menu" role="main">
+            <h2 class="Menu__Title">¿Quieres ponerte en contacto con nosotros?</h2>
+
+            <section class="Menu__Info" aria-label="Información de contacto">
+                <p>En El Veguetazo estamos encantados de ayudarte. Puedes escribirnos por correo electrónico, llamarnos o visitarnos en nuestra sede durante el horario habitual.</p>
+                <ul>
+                    <li><strong>Teléfono:</strong> +34 123 456 789</li>
+                    <li><strong>Email:</strong> contacto@elveguetazo.com</li>
+                    <li><strong>Dirección:</strong> Calle Vegana 45, Las Palmas, Gran Canaria</li>
+                    <li><strong>Horario de atención:</strong> Lunes a viernes de 10:00 a 18:00</li>
+                </ul>
+            </section>
+
+            <form class="Menu__Form" action="#" method="post" aria-label="Formulario de contacto">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required placeholder="tu@correo.com" />
+
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </main>
+
+        <footer class="Cards__Footer">
+            <nav class="Footer__List" aria-label="Menú de navegación">
+                <ul class="List__Menu">
+                    <li class="Menu__Submenu" tabindex="0">
+                        <a href="#" class="Submenu__Select" aria-haspopup="true" aria-expanded="false">Menú</a>
+                        <ul class="Submenu__List" role="menu">
+                            <li><a href="../index.html" class="List__Select" role="menuitem">Inicio</a></li>
+                            <li><a href="../Html/Menu.html" class="List__Select" role="menuitem">Menú</a></li>
+                            <li><a href="../Html/Horarios.html" class="List__Select" role="menuitem" aria-current="page">Horarios</a></li>
+                            <li><a href="../Html/Contacto.html" class="List__Select" role="menuitem">Contacto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

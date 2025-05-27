@@ -1,0 +1,206 @@
+/* Variables CSS para colores y fuentes */
+:root {
+    --color-primary: #FF8C00;
+    --color-bg: antiquewhite;
+    --color-text: #333;
+    --font-family-base: Arial, sans-serif;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font-family-base);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.Cards__Header {
+    background-color: var(--color-primary);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.Header__Title {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Main */
+.Cards__Menu {
+    flex-grow: 1;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.Menu__Title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Información de contacto */
+.Menu__Info {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Formulario de contacto */
+form.Menu__Form {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form.Menu__Form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+form.Menu__Form input,
+form.Menu__Form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    resize: vertical;
+}
+
+form.Menu__Form button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form.Menu__Form button:hover,
+form.Menu__Form button:focus {
+    background-color: #e67600;
+    outline: none;
+}
+
+/* Footer fijo abajo a la izquierda */
+.Cards__Footer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    background: transparent;
+}
+
+/* Menú principal */
+.List__Menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ítem que contiene el menú desplegable */
+.Menu__Submenu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botón menú */
+.Submenu__Select {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+}
+
+/* Submenú desplegable */
+.Submenu__List {
+    display: none;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    background-color: var(--color-bg);
+    min-width: 140px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 200;
+}
+
+.Submenu__List li a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.Submenu__List li a:hover,
+.Submenu__List li a:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Mostrar submenú al pasar el mouse o enfocar */
+.Menu__Submenu:hover .Submenu__List,
+.Menu__Submenu:focus-within .Submenu__List {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .Cards__Footer {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .Submenu__Select {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .Submenu__List {
+        min-width: 120px;
+        bottom: 40px;
+    }
+
+    .Submenu__List li a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
