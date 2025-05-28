@@ -147,12 +147,7 @@ body {
 }
 
 /* Responsive - En pantallas pequeñas ajustar el tamaño del menú */
-@media (max-width: 480px) {
-    .Cards__Footer {
-        left: 10px;
-        bottom: 10px;
-    }
-
+@media (max-width: 480px) 
     .Submenu__Select {
         padding: 10px 15px;
         font-size: 0.9rem;
