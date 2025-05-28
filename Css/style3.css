@@ -163,10 +163,6 @@ body {
 
 /* Responsive */
 @media (max-width: 480px) {
-    .Cards__Footer {
-        left: 10px;
-        bottom: 10px;
-    }
 
     .Submenu__Select {
         padding: 10px 15px;
